@@ -1,0 +1,173 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SleepSync</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav>
+    <div><strong>SleepSync</strong></div>
+    <div>
+      <a href="#features">Features</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <div class="hero">
+    <img src="images/hero.jpg" alt="SleepSync Pillow Mockup">
+    <div class="hero-text">
+      <h1>Sleep, Perfected.</h1>
+      <button class="cta">Pre-Order Now</button>
+    </div>
+  </div>
+
+  <section id="features">
+    <h2>Features</h2>
+    <div class="features">
+      <div class="feature">
+        <img src="images/scent.jpg" alt="Scent Icon">
+        <h3>Scent Integration</h3>
+        <p>Diffuses calming essential oils during your sleep cycle for a relaxing experience.</p>
+      </div>
+      <div class="feature">
+        <img src="images/sound.jpg" alt="Sound Icon">
+        <h3>Soundscape AI</h3>
+        <p>Plays personalized soundscapes or white noise tailored to your sleep patterns.</p>
+      </div>
+      <div class="feature">
+        <img src="images/tracker.jpg" alt="Tracker Icon">
+        <h3>Sleep Tracker Sync</h3>
+        <p>Seamlessly integrates with wearables and sleep apps for optimal analysis.</p>
+      </div>
+      <div class="feature">
+        <img src="images/alarm.jpg" alt="Alarm Icon">
+        <h3>Morning Mode</h3>
+        <p>Gently wakes you with soft vibrations and natural light simulation.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials">
+    <h2>What Our Early Users Say</h2>
+    <div class="testimonial-carousel">
+      <div class="carousel-track">
+        <div class="testimonial">
+          <img src="images/professional.jpg" alt="Professional">
+          <p>“SleepSync helped me relax after long work hours. I wake up refreshed every day!”</p>
+          <strong>- Raj, Busy Professional</strong>
+        </div>
+        <div class="testimonial">
+          <img src="images/parent.jpg" alt="Parent">
+          <p>“My nights are calmer, and I fall asleep faster with the scent feature.”</p>
+          <strong>- Anita, Parent</strong>
+        </div>
+        <div class="testimonial">
+          <img src="images/student.jpg" alt="Student">
+          <p>“Perfect for my erratic study schedule – it tunes into my rhythm perfectly.”</p>
+          <strong>- Arjun, Student</strong>
+        </div>
+        <div class="testimonial">
+          <img src="images/traveler.jpg" alt="Traveler">
+          <p>“I carry SleepSync everywhere – it’s like home in any hotel.”</p>
+          <strong>- Sara, Frequent Traveler</strong>
+        </div>
+      </div>
+      <button class="carousel-btn left" onclick="moveCarousel(-1)">&#10094;</button>
+      <button class="carousel-btn right" onclick="moveCarousel(1)">&#10095;</button>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <h2>Pricing & Pre-order</h2>
+    <div class="pricing-cards">
+      <div class="card">
+        <h3>Early Access</h3>
+        <p class="price">₹5,999</p>
+        <ul>
+          <li>1 Smart Pillow</li>
+          <li>Standard Scent Pack</li>
+          <li>SleepSync App Access</li>
+        </ul>
+        <button class="cta">Reserve Yours</button>
+      </div>
+      <div class="card premium">
+        <h3>Premium Edition</h3>
+        <p class="price">₹8,499</p>
+        <ul>
+          <li>1 Smart Pillow</li>
+          <li>Deluxe Scent Collection</li>
+          <li>Travel Pouch + Sleep Mask</li>
+          <li>Extended Warranty</li>
+        </ul>
+        <button class="cta">Join the Waitlist</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="sleep-score">
+    <h2>Check Your Sleep Score</h2>
+    <form onsubmit="calculateScore(event)">
+      <label>Hours of Sleep per Night: <input type="number" id="hours" min="0" max="24" required></label><br><br>
+      <label>How many times do you wake up? <input type="number" id="interruptions" min="0" required></label><br><br>
+      <label>Do you feel rested in the morning? 
+        <select id="rested">
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+      </label><br><br>
+      <button class="cta" type="submit">Get My Score</button>
+    </form>
+    <div id="score-result"></div>
+  </section>
+
+  <section id="video">
+    <h2>Watch SleepSync in Action</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/GsXUzkvRGGs?si=_5uxLFtMgzwMfWZW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </section>
+
+  <section id="contact">
+    <h2>Contact & FAQs</h2>
+    <div class="faq">
+      <h4>How does it detect my sleep stages?</h4>
+      <p>It uses pressure sensors and syncs with your sleep tracker apps.</p>
+
+      <h4>Is the scent cartridge refillable?</h4>
+      <p>Yes, you can purchase refills separately or opt for a subscription model.</p>
+
+      <h4>How long does the battery last?</h4>
+      <p>One full charge lasts up to 10 nights of regular use.</p>
+    </div>
+  </section>
+
+  <script>
+    let currentIndex = 0;
+    function moveCarousel(direction) {
+      const track = document.querySelector('.carousel-track');
+      const total = track.children.length;
+      currentIndex = (currentIndex + direction + total) % total;
+      track.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    function calculateScore(event) {
+      event.preventDefault();
+      const hours = parseInt(document.getElementById('hours').value);
+      const interruptions = parseInt(document.getElementById('interruptions').value);
+      const rested = document.getElementById('rested').value;
+
+      let score = 10;
+      if (hours < 6) score -= 3;
+      else if (hours < 7) score -= 1;
+      if (interruptions > 2) score -= 2;
+      if (rested === 'no') score -= 2;
+
+      score = Math.max(1, score);
+      document.getElementById('score-result').innerText = `Your Sleep Score is: ${score}/10`;
+    }
+  </script>
+</body>
+</html>
