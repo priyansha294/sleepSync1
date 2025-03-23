@@ -1,0 +1,61 @@
+Code Prompts (ChatGPT 4o):
+
+1. What elements would a website for SleepSync require? It is a smart pillow that syncs with your sleep cycle and provides personalized lullabies, scents, and posture adjustments.
+
+2. Give me the html + css code chunk for the website with a clean and minimalistic UI. The font could be sans serif and the website should have soft blue tones with interactive buttons when you hover.
+    It should have the following sections:
+    1. Navigation Bar with the Product Name and logo directing to the other sections in the webpage
+    2. Hero Section with the Text overlay over the image of the product mockup. It should have the tagline "Sleep, Perfected." and a CTA (Call-to-action) Button: "Experience SleepSync" or "Pre-Order Now"
+    3. Product Features Section :
+        Scent Integration – diffuses calming essential oils during sleep
+        Soundscape AI – plays personalized lullabies or white noise
+        Sleep Tracker Sync – integrates with sleep apps or wearables
+        Morning Mode – gentle vibration & natural light alarm simulation
+        Each feature should have:
+        AI-generated icons or images
+        Short, benefit-focused descriptions
+    4. Testimonials / Use Cases
+        Include quotes from:
+        "Busy professionals"
+        "Parents"
+        "Students"
+        "Frequent travelers"
+        Use images and names for each customer.
+    5. Pricing & Pre-order CTA
+        Tiered pricing or one-time early access deal
+        Call-to-action button: “Reserve Yours” or “Join the Waitlist”
+    6. Contact / Support / FAQ
+        Common questions:
+        How does it detect my sleep stages?
+        Is the scent cartridge refillable?
+        How long does the battery last?
+    
+    Use placeholders for images and also list down the prompts to generate each image.
+3. Split the code into different html and css chunks. Can you make the testimonials into a carousal? Also change the Pricing section into a more modern look.
+Can you also add an interactive section to get a sleep score? Users can enter their data about sleeping habits and it generates how healthy their sleeping habits are on a scale of 1-10 (10 being the highest. Add a youtube widget as well so i can embed an iframe into it. It can be after the pricing section. 
+
+4. Can you reduce the size of the icons in the features section? They should be smaller and should not exceed outside the card. Also the feature cards should be 2 in one row. Reduce the pictures in the testimonials section as well.
+Centre align all the text. Thanks
+
+5. Can you add more questions to the part where we calculate a person's sleep score and then add a CTA button along the lines of "Contact our experts for pillow recommendations".
+
+Image Prompts (Gemini 2.0):
+
+1. Give me an image for the following prompt. It should be photorealistic
+A futuristic smart pillow placed on a cozy bed in a dimly lit, modern bedroom – soft blue lighting and ambient vibes
+
+2. Give me a Minimalist icon of a diffuser with soft aroma waves in pastel tones
+
+3. Give me an image for an icon of headphones with music waves and moon symbols
+
+4. Give me an icon for a Smartwatch syncing with sleep tracker app – flat design icon
+
+5. Give me an icon with the following prompt:Sunrise icon with subtle vibration lines and a pillow
+
+6. Give me a photorealistic image of a young Indian man in office attire, smiling, minimal background
+
+7. Give me a photorealistic Portrait of an Indian woman with a toddler in a home setting, warm tones
+
+8. Generate a photorealistic Portrait of a university student with books and headphones, casual wear
+
+9. Generate a photorealistic Portrait of a woman with a travel pillow and backpack at an airport lounge
